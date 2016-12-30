@@ -13,7 +13,7 @@ IDE for your PHP development, it may offer a more comprehensive solution.
 Requires PHP 5
 ------------------------
 Parameters:  
-$root_dir : The directory in which you want to search.
-	Default: The directory the file is in.
+$root_dir : The directory in which you want to search.  
+	Default: The directory the file is in.  
 $ingored_folders: Names folders should include which can be ignored.
   Example: if $ignored_folders=['archive'], all folders and subfolders with the name 'archive' in them will be ignored.

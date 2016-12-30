@@ -19,19 +19,10 @@ Requires PHP 5
 ------------------------
 Parameters:
 $root_dir : The directory in which you want to search.
-	Default: The directory the file is in.
-$ingored_folders: Folders inside the root_dir wishing to be ignored.
-	Default: []; (Empty array)
-	Example:
-	var/www/html
-		/archive
-			/old_2015
-		/testing_Functions
-			/old_2015
-	$root_dir = www/html/;
-	$ignored_folders = ["/archive","/testing_Functions/old_2015"];
-	will give the unused functions in all but /archive and
-	/testing_functions/old_functions
+Default: The directory the file is in.
+$ingored_folders: Names folders should include which can be ignored.
+Example: if $ignored_folders=['archive'], all folders and subfolders with the
+name 'archive' in them will be ignored.
 */
 
 // Some styling:
@@ -52,7 +43,7 @@ ini_set('memory_limit', '2048M');
 
 // Set the dir as current dir
 $root_dir = dirname(__FILE__);
-$ignored_folders = ['archive'];
+$ignored_folders = [];
 
 // Show the ignored folders
 echo "<h3> Folders in $root_dir which will be ignored:</h3>";
